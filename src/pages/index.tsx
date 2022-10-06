@@ -43,6 +43,8 @@ export default function IndexPage({
   )
 }
 
+//tests
+
 export function Head() {
   return <SEO title="Home" description="This is the homepage!" pathname="" />
 }
