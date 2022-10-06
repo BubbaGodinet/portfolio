@@ -13,4 +13,5 @@ export default function Hero() {
 
 const Wrapper = styled.div`
   width: 100%;
+  height: 52.083vw;
 `
