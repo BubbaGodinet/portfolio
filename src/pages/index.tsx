@@ -375,6 +375,7 @@ const YellowWrapper = styled.div`
   width: 44vw;
   /* border: 1px solid red; */
 
+
   ${media.fullWidth} {
     top: 1037px;
     left: 274px;
