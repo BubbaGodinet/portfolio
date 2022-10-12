@@ -5,6 +5,7 @@ import ScrollSmoother from "gsap/ScrollSmoother"
 
 type ScrollProps = {
   children: React.ReactNode
+  className: string
 }
 
 /**
@@ -27,7 +28,7 @@ export const useIsSmooth = () => {
   return smooth
 }
 
-export default function Scroll({ children }: ScrollProps) {
+export default function Scroll({ children, className }: ScrollProps) {
   const isSmooth = useIsSmooth()
 
   useEffect(() => {
@@ -43,7 +44,7 @@ export default function Scroll({ children }: ScrollProps) {
   }, [isSmooth])
 
   return (
-    <div id="smooth-wrapper">
+    <div className={className} id="smooth-wrapper">
       <div id="smooth-content">{children}</div>
     </div>
   )
