@@ -5,15 +5,28 @@ import "normalize.css"
 import React from "react"
 
 import gsap from "gsap"
+import { MotionPathPlugin, DrawSVGPlugin } from "gsap/all"
+import { CSSPlugin } from "gsap/CSSPlugin"
+import { CustomEase } from "gsap/CustomEase"
+import { MotionPathHelper } from "gsap/MotionPathHelper"
+import { MorphSVGPlugin } from "gsap/MorphSVGPlugin"
 import { ScrollSmoother } from "gsap/ScrollSmoother"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-import BlueTransition from "components/BlueTransition"
-import GreenTransition from "components/GreenTransition"
 import Providers from "components/Providers"
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-
+gsap.registerPlugin(
+  CSSPlugin,
+  CustomEase,
+  MorphSVGPlugin,
+  ScrollToPlugin,
+  DrawSVGPlugin,
+  MotionPathPlugin,
+  MotionPathHelper,
+  ScrollTrigger,
+  ScrollSmoother
+)
 export const wrapRootElement = ({ element }: { element: React.ReactNode }) => {
   return <Providers>{element}</Providers>
 }
@@ -21,8 +34,6 @@ export const wrapRootElement = ({ element }: { element: React.ReactNode }) => {
 export const wrapPageElement = ({ element }: { element: React.ReactNode }) => {
   return (
     <div>
-      {/* <BlueTransition /> */}
-      {/* <GreenTransition /> */}
       {element}
     </div>
   )
