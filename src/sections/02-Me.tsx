@@ -44,7 +44,7 @@ const Wave = styled.div`
 const Text = styled.div`
   ${text.h3};
   color: ${colors.cream};
-  z-index: 1;
+  z-index: 4;
 `
 const Image = styled.img`
   width: 33.75vw;
@@ -70,7 +70,8 @@ const Wrapper = styled.div`
 
   ${media.fullWidth} {
     gap: 150px;
-    padding: 0 50px;
+    padding: 215px 63px;
+    height: 1440px;
   }
 `
 

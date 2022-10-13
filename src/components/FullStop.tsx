@@ -10,6 +10,7 @@ const Wrapper = styled.div`
   width: 100%;
 
   ${media.fullWidth} {
+    position: relative;
     margin: 0 auto;
     max-width: 1440px;
   }
