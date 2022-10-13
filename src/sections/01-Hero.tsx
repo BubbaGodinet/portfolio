@@ -91,7 +91,7 @@ const DownArrow = styled(CircleDown)`
   opacity: 0;
 
   ${media.fullWidth} {
-    top: 1022px;
+    top: 871px;
     width: 54px;
     height: 54px;
   }
@@ -105,7 +105,7 @@ const WordContainer = styled.div`
   height: auto;
 
   ${media.fullWidth} {
-    top: 432px;
+    top: 360px;
   }
 `
 const WelcomeWords = styled.h1`
@@ -123,5 +123,9 @@ const Wrapper = styled.div`
   overflow: hidden;
   width: 100%;
   height: 71.111vw;
-  z-index: 2;
+  z-index: 10;
+
+  ${media.fullWidth} {
+    height: 1024px;
+  }
 `
